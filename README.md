@@ -10,6 +10,8 @@
     * `npm install`
 * Start dev server
     * `npm run dev`
+* Run the tests
+    * `npm run test`
 
 ## The code
 * The starting point is `public/index.html` which references `src/main.ts` which references `src/App.svelte`
