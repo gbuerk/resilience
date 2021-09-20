@@ -1,5 +1,7 @@
 # Resilience Bioreactor
 
+## Demo
+* See the demo at http://resilience-demo.ddns.net:4000/
 ## Run locally
 * Prerequisites
     * This app requires npm and node to build and run
@@ -44,4 +46,5 @@
     * In this case, I needed to make some assumptions about how fill level and temperature relate to time.
         * If the operator overfills the bioreactor, my solution _will_ allow them to empty some.  As long as they stop the fill within the range _at some point_ in the batch, the first CPP is deemed successful.  
         * This looks a bit funny if, say, the "Actually Fill Level", which I interpret as _maxFill_, may be well out of the threshold, say 80%, but the CPP #1 may still be successful.
+        * This is also why the third section of the `Fill Percent` gear is yellow, not red.  
         * This would be easy enough to change.  In fact, the solution would be simpler if the batch was deemed a failure if the fill level exceeds the top of the range.
